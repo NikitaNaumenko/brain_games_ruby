@@ -1,0 +1,49 @@
+Metrics/LineLength:
+  Max: 110
+
+Metrics/MethodLength:
+  Max: 20
+  Exclude:
+    - 'test/**/*'
+    - 'spec/**/*'
+
+Metrics/BlockLength:
+  Max: 20
+  Exclude:
+    - 'test/**/*'
+    - 'spec/**/*'
+
+Metrics/AbcSize:
+  Max: 20
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - "test/**/*"
+    - 'spec/**/*'
+
+Style/Documentation:
+  Exclude:
+    - 'test/**/*'
+    - 'spec/**/*'
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented_relative_to_receiver
+
+Style/DotPosition:
+  EnforcedStyle: trailing
+
+AllCops:
+  # Include gemspec and Rakefile
+  DisplayCopNames: true
+  ExtraDetails: true
+  Include:
+    - '**/*.gemspec'
+    - '**/*.jbuilder'
+    - '**/*.rake'
+    - '**/Gemfile'
+    - '**/Rakefile'
+    - '**/Vagrantfile'
+
+# Allow safe assignment in conditions.
+Style/ParenthesesAroundCondition:
+  AllowSafeAssignment: true
