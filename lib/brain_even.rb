@@ -3,20 +3,16 @@
 require 'brain_games_ruby/engine'
 
 module BrainEven
-  def self.start!
-    task = 'Answer "yes" if the number is even, otherwise answer "no".'
+  TASK = 'Answer "yes" if the number is even, otherwise answer "no".'
 
+  def self.start!
     game_data = lambda {
       question = Random.rand(100)
-      answer = is_even?(question) ? 'yes' : 'no'
+      answer = Integer.even?(question) ? 'yes' : 'no'
 
       { question: question, answer: answer }
     }
 
-    BrainGamesRuby::Engine.new(task, game_data).run!
-  end
-
-  def self.is_even?(num)
-    num % 2 == 0
+    BrainGamesRuby::Engine.new(TASK, game_data).run!
   end
 end
