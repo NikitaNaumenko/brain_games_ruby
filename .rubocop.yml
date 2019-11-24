@@ -22,9 +22,7 @@ Lint/AmbiguousBlockAssociation:
     - 'spec/**/*'
 
 Style/Documentation:
-  Exclude:
-    - 'test/**/*'
-    - 'spec/**/*'
+  Enabled: false
 
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented_relative_to_receiver
