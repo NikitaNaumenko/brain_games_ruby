@@ -1,5 +1,9 @@
 require "bundler/setup"
-require "brain_games_ruby"
+require "brain_even"
+require "brain_calc"
+require "brain_gcd"
+require "brain_prime"
+require "brain_progression"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

@@ -8,7 +8,7 @@ module BrainEven
   def self.start!
     game_data = lambda {
       question = Random.rand(100)
-      answer = Integer.even?(question) ? 'yes' : 'no'
+      answer = question.even? ? 'yes' : 'no'
 
       { question: question, answer: answer }
     }
